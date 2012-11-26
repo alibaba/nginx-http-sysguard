@@ -40,19 +40,19 @@ Turn on or off this module.
 **Default**: none  
 **Context**: http, server, location  
 Specify the load threshold.  
-When the system load exceeds this threshold, all subsequent requests will be redirected to the URL specified by the 'action' parameter. Tengine will return 503 if there's no 'action' URL defined.
+When the system load exceeds this threshold, all subsequent requests will be redirected to the URL specified by the 'action' parameter. Nginx will return 503 if there's no 'action' URL defined.
 
 **Syntax**: sysguard_mem swapratio=ratio% [action=/url]  
 **Default**: none  
 **Context**: http, server, location  
 Specify the used swap memory threshold.  
-When the swap memory use ratio exceeds this threshold, all subsequent requests will be redirected to the URL specified by the 'action' parameter. Tengine will return 503 if there's no 'action' URL.
+When the swap memory use ratio exceeds this threshold, all subsequent requests will be redirected to the URL specified by the 'action' parameter. Nginx will return 503 if there's no 'action' URL.
 
 **Syntax**: sysguard_interval time  
 **Default**: sysguard_interval 1s  
 **Context**: http, server, location  
 Specify the time interval to update your system information.  
-The default value is one second, which means tengine updates the server status once a second.
+The default value is one second, which means Nginx updates the server status once a second.
 
 **Syntax**: sysguard_log_level [info | notice | warn | error]  
 **Default**: sysguard_log_level error  
