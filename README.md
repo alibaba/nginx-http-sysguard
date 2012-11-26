@@ -4,20 +4,20 @@ This module can be used to protect your server in case system load or memory use
 
 ###Examples:
 
-server {
-    sysguard on;
+    server {
+        sysguard on;
 
-    sysguard_load load=1.1 action=/loadlimit;
-    sysguard_mem swapratio=90% action=/swaplimit;
+        sysguard_load load=1.1 action=/loadlimit;
+        sysguard_mem swapratio=90% action=/swaplimit;
 
-    location /loadlimit {
-        return 500;
+        location /loadlimit {
+            return 500;
+        }
+
+        location /swaplimit {
+            return 500;
+        }
     }
-
-    location /swaplimit {
-        return 500;
-    }
-}
 
 ##Directives
 
