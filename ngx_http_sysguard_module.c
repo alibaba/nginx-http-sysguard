@@ -138,14 +138,14 @@ ngx_http_sysguard_update(ngx_http_request_t *r, time_t exptime)
         ngx_http_sysguard_cached_load = load;
     }
 
-    if (glcf->swap >=0 ) {
+    if (glcf->swap >= 0) {
         rc = ngx_getmeminfo(&m, r->connection->log);
         if (rc == NGX_ERROR) {
             goto error;
         }
 
         ngx_http_sysguard_cached_swapstat = m.totalswap == 0
-            ? 0 : (m.totalswap- m.freeswap) * 100 / m.totalswap;
+            ? 0 : (m.totalswap - m.freeswap) * 100 / m.totalswap;
     }
 
     return NGX_OK;
