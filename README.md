@@ -1,4 +1,4 @@
-##DESCRIPTION
+##Description
 
 This module can be used to protect your server in case system load or memory use goes too high.
 
@@ -18,6 +18,16 @@ This module can be used to protect your server in case system load or memory use
             return 500;
         }
     }
+
+##Installation
+
+wget http://www.nginx.org/download/nginx-1.2.5.tar.gz
+tar xzvf nginx-1.2.5.tar.gz
+cd nginx-1.2.5
+git clone https://github.com/lifeibo/nginx-http-sysguard.git
+patch -p1 < nginx-http-sysguard/nginx_sysguard_1.2.5.patch
+./configure --add-module=nginx-http-sysguard
+make && make install
 
 ##Directives
 
