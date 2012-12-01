@@ -12,11 +12,11 @@ It comes from [Tengine](http://tengine.taobao.org), an Nginx distribution with q
         sysguard_mem swapratio=20% action=/swaplimit;
 
         location /loadlimit {
-            return 500;
+            return 503;
         }
 
         location /swaplimit {
-            return 500;
+            return 503;
         }
     }
 
