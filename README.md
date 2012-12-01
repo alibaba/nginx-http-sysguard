@@ -1,6 +1,7 @@
 ##Description
 
-This module can be used to protect your server in case system load or memory use goes too high.
+This module can be used to protect your server in case system load or memory use goes too high.<br/>
+It comes from [Tengine](http://tengine.taobao.org), an Nginx distribution with quite a few advanced features.
 
 ###Examples:
 
