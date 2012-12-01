@@ -7,8 +7,8 @@ This module can be used to protect your server in case system load or memory use
     server {
         sysguard on;
 
-        sysguard_load load=1.1 action=/loadlimit;
-        sysguard_mem swapratio=90% action=/swaplimit;
+        sysguard_load load=10.5 action=/loadlimit;
+        sysguard_mem swapratio=20% action=/swaplimit;
 
         location /loadlimit {
             return 500;
